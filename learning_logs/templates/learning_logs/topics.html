@@ -4,7 +4,9 @@
 {% block content %}
     {% for topic in topics %}
     <ul>
-        <li>{{topic.text}}</li>
+        <li> 
+            <a href=" {% url "learning_logs:topic" topic.id %}"> {{topic.text}} </a>
+        </li>
     </ul>    
     {%empty%}
     <p>No topic added yet. </p>
