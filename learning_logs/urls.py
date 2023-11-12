@@ -8,4 +8,5 @@ urlpatterns = [
         
     # individual topic page
     path('topics/<int:topic_id>/', views.topic, name='topic'),
+    path('create_topic/', views.create_topic, name='create_topic'),
 ]
