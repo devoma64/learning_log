@@ -1,12 +1,14 @@
 {% extends "learning_logs/base.html" %}
 
 {% block content %}
-    <p>
-        <strong> Topic: {{topic.text}} </strong>
-    </p>
+
+    <p><strong> Topic: {{topic.text}} </strong></p>
     <p>Entry: </p>
+    
     <p> 
         <a href="{% url "learning_logs:create_entry" topic.id %}">Add new entry </a>
+    </p>
+
     {% for entry in entries %}
         <p>{{entry.date_added|date:'M d, Y H:i'}}
         <p>{{entry.text|linebreaks}}</p>
